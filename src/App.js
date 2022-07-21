@@ -7,9 +7,13 @@ import Edit from "./components/Edit";
 function App() {
   return (
     <div className="App">
-      <div>
-        <Link to="/">Home</Link>
-        <Link to="/add-event">Add-Event</Link>
+      <div className="link">
+        <Link to="/" className="link2">
+          Home
+        </Link>
+        <Link to="/add-event" className="link2">
+          Add-Event
+        </Link>
       </div>
       <Routes>
         <Route path="/" element={<DisplayData />}></Route>
