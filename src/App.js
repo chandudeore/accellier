@@ -1,10 +1,21 @@
 import "./App.css";
+import { Link, Route, Routes } from "react-router-dom";
+import DisplayData from "./components/DisplayData";
 import Event from "./components/Event";
+import Edit from "./components/Edit";
 
 function App() {
   return (
     <div className="App">
-      <Event />
+      <div>
+        <Link to="/">Home</Link>
+        <Link to="/add-event">Add-Event</Link>
+      </div>
+      <Routes>
+        <Route path="/" element={<DisplayData />}></Route>
+        <Route path="/add-event" element={<Event />}></Route>
+        <Route path="/edit/:id" element={<Edit />}></Route>
+      </Routes>
     </div>
   );
 }

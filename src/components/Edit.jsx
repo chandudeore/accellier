@@ -1,7 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 
-export default function Event() {
+export default function Edit() {
   let eventInfo = {
     eName: "",
     eDesignation: "",
@@ -12,6 +14,8 @@ export default function Event() {
 
   const [eventData, setEventData] = useState(eventInfo);
 
+  const { id } = useParams();
+
   const handleChange = (e) => {
     const { name, value } = e.target;
 
@@ -20,15 +24,14 @@ export default function Event() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3001/event", {
-      method: "POST",
+    fetch(`http://localhost:3001/event/${id}`, {
+      method: "PUT",
       body: JSON.stringify(eventData),
       headers: {
         "Content-Type": "application/json",
       },
     });
   };
-
   const handleReset = () => {
     eventInfo = {
       eName: "",
@@ -81,9 +84,10 @@ export default function Event() {
             required
           ></textarea>
           <div>
-            <button type="submit" onClick={handleReset}>
-              Submit
+            <button>
+              <Link to="/">Cancel</Link>
             </button>
+            <button type="submit">Save</button>
             <button type="reset" onClick={handleReset}>
               Reset
             </button>
