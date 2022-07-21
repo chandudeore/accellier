@@ -1,0 +1,28 @@
+{
+  "event": [
+    {
+      "eName": "sdfds",
+      "eDesignation": "fddasf",
+      "edate": "2022-07-22",
+      "location": "Mohali",
+      "eDetails": "dsfs",
+      "id": 1
+    },
+    {
+      "eName": "sdfds",
+      "eDesignation": "fddasf",
+      "edate": "2022-07-22",
+      "location": "Mohali",
+      "eDetails": "dsfs",
+      "id": 2
+    },
+    {
+      "eName": "sdfds",
+      "eDesignation": "fddasf",
+      "edate": "2022-07-22",
+      "location": "Mohali",
+      "eDetails": "dsfs",
+      "id": 3
+    }
+  ]
+}
